@@ -137,17 +137,25 @@ body {
     background-color: transparent;
     border: 2px solid #815b0fce;
     padding: 8px 20px;
-    border-radius: 3px;
+    border-radius: 6px; /* Slightly smoother corners */
     outline: none;
     cursor: pointer;
     color: #815b0fce;
     font-weight: bold;
-    font-size:12px;
+    font-size: 12px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0px 0px 5px rgba(129, 91, 15, 0.2);
 }
+
 .button:hover {
-    padding: 8px 21px;
-    font-size:14px;
+    background-color: #815b0fce; /* Fill color on hover */
+    color: #fff; /* Text color change */
+    padding: 8px 22px; /* Subtle expansion */
+    font-size: 14px;
+    box-shadow: 0px 4px 15px rgba(129, 91, 15, 0.4); /* Elevated effect */
+    transform: translateY(-2px); /* Slight lift effect */
 }
+
 @media screen and (max-width:576px) {
     .button {
         padding: 8px 12px;
@@ -215,14 +223,15 @@ body {
     /* color: #3C5E39; */
     color: #523907ce;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .icon-container a:hover {
-    /* color: #FFD700;  */
-    /* color: #A4C639; */
-    color: #d59f5cc1;
+    color: #ffbb33; /* A more vibrant golden shade */
+    text-shadow: 0px 0px 8px rgba(255, 187, 51, 0.6); /* Subtle glowing effect */
+    transform: scale(1.2) rotate(5deg); /* Slight zoom and rotation */
 }
+
 .links-buttons-container {
     display: flex;
     flex-direction: column;
@@ -236,16 +245,19 @@ body {
     padding-bottom: 50px;
 }
 .link-button {
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px; /* Smoother corners */
     background-color: transparent;
-    border: 1.5px solid #815b0fce;
+    border: 2px solid #815b0fce;
     color: #815b0fce;
     width: 100%;
-    max-width:500px;
+    max-width: 500px;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 6px rgba(129, 91, 15, 0.2);
 }
 @media screen and (max-width:576px) {
     .link-button{
@@ -254,8 +266,11 @@ body {
     
 }
 .link-button:hover {
-    background-color: #fff;
-    border: none;
+    background-color: #815b0fce;
+    color: #fff;
+    border: 2px solid transparent;
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0px 4px 12px rgba(129, 91, 15, 0.4);
 }
 .card-container {
     display: flex;
@@ -269,22 +284,34 @@ body {
     z-index: 10;
     padding-bottom: 30px;
 }
+
 .drop {
     position: relative;
-    width:350px;
+    width: 350px;
     height: 260px;
-    border: 1.5px solid #815b0fce;
-    background-color: transparent;
+    border: 1.5px solid #815b0fce; /* Removed the border for a cleaner look */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    backdrop-filter: blur(8px); /* Soft blur effect */
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
     overflow: auto;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.drop:hover {
+    background: rgba(255, 255, 255, 0.3); /* Lighter glass effect */
+    box-shadow: 0px 15px 40px rgba(255, 166, 0, 0.3), 
+                0px 5px 15px rgba(255, 115, 0, 0.2); /* Warm glow effect */
+    transform: translateY(-12px) scale(1.03) rotateX(6deg); /* More lift */
+    border: 1px solid rgba(255, 166, 0, 0.4); /* Adds a soft, glowing border */
 }
 
 .drop::-webkit-scrollbar {
@@ -297,12 +324,6 @@ body {
         height: 280px;
     }
     
-}
-
-.drop:hover {
-    /* background-color: #f1dbc4; */
-    background-color: #fff;
-    border: 2px solid #815b0fce;
 }
 .card-heading {
     font-size: 22px;
@@ -329,18 +350,25 @@ body {
     padding-top:15px;
 }
 .read-button {
-    padding: 6px 12px;
+    padding: 8px 14px;
     background-color: #dabe9bc1;
     outline: none;
     color: #523907ce;
     border: 1px solid #523907ce;
-    border-radius: 5px;
+    border-radius: 8px; /* Softer corners */
     cursor: pointer;
-    padding-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 6px rgba(82, 57, 7, 0.2);
 }
+
 .read-button:hover {
-    background-color: #fff;
-    border: 1.5px solid #523907ce;
+    background-color: #523907ce;
+    color: #fff; /* Text color change */
+    border: 1px solid #dabe9bc1;
+    transform: translateY(-2px); /* Floating effect */
+    box-shadow: 0px 4px 12px rgba(82, 57, 7, 0.4);
 }
 .contact-form {
     display: flex;
