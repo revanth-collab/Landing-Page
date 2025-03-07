@@ -15,7 +15,6 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    max-height: 1000vh;
     padding: 20px;
     position: relative;
 }
@@ -130,7 +129,7 @@ body {
     .content-container {
         font-size: 30px;
         padding-left:0px;
-        max-width: 230px;
+        max-width: 250px;
     }
 }
 .button {
@@ -272,6 +271,10 @@ body {
     transform: translateY(-3px); /* Lift effect */
     box-shadow: 0px 4px 12px rgba(129, 91, 15, 0.4);
 }
+.link-button:active {
+    transform: translateY(-8px) scale(1.03); /* Subtle Press Effect */
+    box-shadow: 0px 10px 30px rgba(129, 91, 15, 0.4); /* Softer Press Glow */
+}
 .card-container {
     display: flex;
     flex-direction: row;
@@ -284,14 +287,12 @@ body {
     z-index: 10;
     padding-bottom: 30px;
 }
-
 .drop {
     position: relative;
     width: 350px;
     height: 260px;
-    border: 1.5px solid #815b0fce; /* Removed the border for a cleaner look */
-    background: rgba(255, 255, 255, 0.1); /* Glass effect */
-    backdrop-filter: blur(8px); /* Soft blur effect */
+    background: rgba(255, 255, 255, 0.15); /* Subtle Glass Effect */
+    backdrop-filter: blur(12px); /* Soft Blur */
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -299,19 +300,36 @@ body {
     align-items: center;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top:10px;
     overflow: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
     transform-style: preserve-3d;
+    border: 1.5px solid transparent;
+    box-shadow: 0px 6px 15px rgba(129, 91, 15, 0.25); /* Initial soft shadow */
+    color: #523907ce;
 }
 
 .drop:hover {
-    background: rgba(255, 255, 255, 0.3); /* Lighter glass effect */
-    box-shadow: 0px 15px 40px rgba(255, 166, 0, 0.3), 
-                0px 5px 15px rgba(255, 115, 0, 0.2); /* Warm glow effect */
-    transform: translateY(-12px) scale(1.03) rotateX(6deg); /* More lift */
-    border: 1px solid rgba(255, 166, 0, 0.4); /* Adds a soft, glowing border */
+    background: rgba(129, 91, 15, 0.8); /* Darker, richer background */
+    color: #fff; /* White text */
+    box-shadow: 0px 20px 50px rgba(129, 91, 15, 0.7), /* Deep Outer Glow */
+                0px 8px 25px rgba(129, 91, 15, 0.5), /* Mid Soft Glow */
+                inset 0px 3px 10px rgba(255, 255, 255, 0.3); /* Inner Light */
+    transform: translateY(-15px) scale(1.05) rotateX(8deg); /* More 3D Pop */
+    border: 1.5px solid rgba(255, 255, 255, 0.6); /* Glowing Border */
+}
+
+.drop:hover .card-heading,
+.drop:hover .main-para,
+.drop:hover .para {
+    color: #fff; /* Text turns white */
+}
+
+.drop:active {
+    transform: translateY(-8px) scale(1.03); /* Subtle Press Effect */
+    box-shadow: 0px 10px 30px rgba(129, 91, 15, 0.4); /* Softer Press Glow */
 }
 
 .drop::-webkit-scrollbar {
@@ -320,29 +338,36 @@ body {
 
 @media screen and (max-width:576px) {
     .drop {
-        width:300px;
+        width: 300px;
         height: 280px;
     }
-    
 }
+
+/* Updated Text Styles */
 .card-heading {
     font-size: 22px;
     font-weight: bold;
     color: #523907ce;
     margin-bottom: 8px;
+    transition: color 0.4s ease;
 }
+
 .main-para {
     font-weight: bold;
-    font-size:14px;
+    font-size: 14px;
     color: #72510ece;
     margin-bottom: 8px;
+    transition: color 0.4s ease;
 }
+
 .para {
     text-align: justify;
     color: #ad7633c1;
     font-weight: 500;
     font-size: 15px;
+    transition: color 0.4s ease;
 }
+
 .read-more-button {
     padding-top: 5px;
 }
@@ -361,15 +386,23 @@ body {
     font-size: 14px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 2px 6px rgba(82, 57, 7, 0.2);
+    position: relative;
+    z-index: 5; /* Keeps button above the card */
 }
 
 .read-button:hover {
-    background-color: #523907ce;
-    color: #fff; /* Text color change */
+    background-color: #7a4f18; /* Richer brown */
+    color: #fff; /* Text contrast */
     border: 1px solid #dabe9bc1;
-    transform: translateY(-2px); /* Floating effect */
-    box-shadow: 0px 4px 12px rgba(82, 57, 7, 0.4);
+    transform: translateY(-3px) scale(1.02); /* Floating effect */
+    box-shadow: 0px 6px 15px rgba(82, 57, 7, 0.45); /* Stronger glow */
 }
+
+.read-button:active {
+    transform: translateY(1px) scale(0.98); /* Press effect */
+    box-shadow: 0px 3px 8px rgba(82, 57, 7, 0.3);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
