@@ -196,6 +196,27 @@ document.querySelectorAll(".contact-form").forEach(form => {
         }
     });
 });
+window.onload = function() {
+    const pageHeight = document.documentElement.scrollHeight;
+    const pageWidth = document.documentElement.scrollWidth;
+
+    console.log("Total Website Height:", pageHeight + "px");
+    console.log("Total Website Width:", pageWidth + "px");
+
+    // Optionally, display the dimensions on the webpage
+    const banner = document.createElement("div");
+    banner.style.position = "fixed";
+    banner.style.bottom = "10px";
+    banner.style.left = "10px";
+    banner.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    banner.style.color = "#fff";
+    banner.style.padding = "10px";
+    banner.style.fontSize = "16px";
+    banner.style.borderRadius = "5px";
+    banner.innerText = `Height: ${pageHeight}px | Width: ${pageWidth}px`;
+
+    // document.body.appendChild(banner);
+};
     </script>
 </body>
 </html>

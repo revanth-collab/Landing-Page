@@ -432,6 +432,7 @@ body {
     margin: 0px;
     min-width: 320px;
     width:330px;
+    max-height: 420px;
 }
 .form-heading{
     color: #9b720b;
