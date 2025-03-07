@@ -189,10 +189,17 @@ document.querySelectorAll(".contact-form").forEach(form => {
             });
 
             const result = await response.json();
-            alert(result.message);
-            form.reset(); // Reset the form after submission
+            // alert(result.message);
+            // form.reset();
+            if (response.ok && result.message) {  
+                alert(result.message); // Show the success message
+                form.reset(); // Reset the form after successful submission
+            } else {
+                alert("Please Provide all details"); // Show error message if the response is not successful
+            }
         } catch (error) {
             console.error("Error submitting form:", error);
+            alert("An error occurred. Please try again.");
         }
     });
 });
