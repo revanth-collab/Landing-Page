@@ -31,6 +31,25 @@
                 <p>Helping you shine inside and out!</p> -->
                 <button type="button" class="button">Join Now and Get 10% Off</button>
                 <p class="description">Your all-in-one appointment and service booking app tailored for the beauty and wellness industry. With Estetica, booking a salon, spa, or clinic appointment has never been easier.</p>
+                <div class="icon-container">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.threads.net/" target="_blank">
+                        <i class="fas fa-at"></i>
+                    </a>
+                    
+                    
+                </div>
             </div>
             <!-- <div class="round-image-container">
                 <img src="https://tse2.mm.bing.net/th?id=OIP.hv76so4yDz9dwkeemXOnIwHaEz&pid=Api&P=0&h=220" class="round-image" />
@@ -56,28 +75,8 @@
                 <div><button type="submit" class="button submit-button">Submit</button></div>
             </form>
         </div>
-        
-        <div class="icon-container">
-            <a href="https://www.facebook.com/" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/" target="_blank">
-                <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.threads.net/" target="_blank">
-                <i class="fas fa-at"></i>
-            </a>
-            
-            
-        </div>
     </div>
-    <div class="mobile-form-container">
+    <!-- <div class="mobile-form-container">
         <form class="contact-form mobile" id="mobileContactForm">
             <h1 class="form-heading">Contact Form</h1>
             <div class="input-container">
@@ -98,7 +97,7 @@
             </div>
             <div><button type="submit" class="button submit-button">Submit</button></div>
         </form>
-    </div>
+    </div> -->
     <div id="services" class="card-container">
         <div class="drop">
             <h1 class="card-heading">SPA</h1>
@@ -168,62 +167,6 @@
                 moreText.style.display = "inline";
             }
         }
-
-        // document.getElementById("contactForm").addEventListener("submit", async function(event) {
-        //     event.preventDefault(); // Prevent page reload
-
-        //     const formData = {
-        //         name: document.getElementById("name").value,
-        //         email: document.getElementById("email").value,
-        //         number: document.getElementById("number").value,
-        //         message: document.getElementById("message").value
-        //     };
-
-        //     try {
-        //         const response = await fetch("http://localhost:5000/submit-form", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-Type": "application/json"
-        //             },
-        //             body: JSON.stringify(formData)
-        //         });
-
-        //         const result = await response.json();
-        //         alert(result.message);
-        //         document.getElementById("contactForm").reset(); // Reset the form after submission
-        //     } catch (error) {
-        //         console.error("Error submitting form:", error);
-        //     }
-        // });
-
-//         document.querySelectorAll(".contact-form").forEach(form => {
-//     form.addEventListener("submit", async function(event) {
-//         event.preventDefault(); // Prevent page reload
-
-//         const formData = {
-//             name: form.querySelector("#name").value,
-//             email: form.querySelector("#email").value,
-//             number: form.querySelector("#number").value,
-//             message: form.querySelector("#message").value
-//         };
-
-//         try {
-//             const response = await fetch("http://localhost:5000/submit-form", {
-//                 method: "POST",
-//                 headers: {
-//                     "Content-Type": "application/json"
-//                 },
-//                 body: JSON.stringify(formData)
-//             });
-
-//             const result = await response.json();
-//             alert(result.message);
-//             form.reset(); // Reset the form after submission
-//         } catch (error) {
-//             console.error("Error submitting form:", error);
-//         }
-//     });
-// });
 
 document.querySelectorAll(".contact-form").forEach(form => {
     form.addEventListener("submit", async function(event) {

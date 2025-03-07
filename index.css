@@ -20,7 +20,7 @@ body {
 }
 @media screen and (max-width:576px) {
     .landing-page-container {
-        height:80vh;
+        height:150vh;
     }
 }
 .center-image {
@@ -59,8 +59,9 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap:40px;
+    flex-wrap: wrap;
     position: absolute;
     top:120px;
     left: 100px;
@@ -206,7 +207,6 @@ body {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
-    position: absolute;
     left:120px;
     bottom: 60px;
 }
@@ -443,6 +443,7 @@ body {
         margin-bottom: 20px;
         gap:10px;
         width:320px;
+        margin-left:-12px;
     }
     .input-container{
         flex-direction: column;
@@ -455,19 +456,19 @@ body {
     justify-content: center;
     align-items: center;
 }
-.desktop {
+/* .desktop {
     display: flex;
 }
 @media screen and (max-width:576px) {
     .desktop {
         display: none;
     }
-}
-.mobile {
+} */
+/* .mobile {
     display: none;
 }
 @media screen and (max-width:576px) {
     .mobile{
         display: flex;
     }
-}
+} */
